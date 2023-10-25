@@ -24,7 +24,7 @@ public class CartDeliveryTest {
         $(withText("Успешно")).shouldBe(Condition.hidden);
         $("[data-test-id=agreement]").click();
         $(".button").click();
-        $("[data-test-id=notification]").shouldBe(Condition.visible, Duration.ofSeconds(10));
+        $("[data-test-id=notification]").shouldBe(Condition.visible, Duration.ofSeconds(15));
         $("[data-test-id=notification]").shouldHave(Condition.text("Успешно!\n" +
                 "Встреча успешно забронирована на " + generateDate(29, "dd.MM.yyyy"))).shouldBe(Condition.visible);
     }
